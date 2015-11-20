@@ -31,21 +31,9 @@
 
         public function adiciona()
         {
-            $nome = Request::input('nome');
-            $descricao = Request::input('descricao');
-            $valor = Request::input('valor');
-            $quantidade = Request::input('quantidade');
+            Produto::create(Request::all());
 
-            DB::insert  (
-                            'INSERT INTO produtos (nome, quantidade, valor, descricao) VALUES (?,?,?,?)',
-                            array($nome, $quantidade, $valor, $descricao)
-                        );
-
-            ///return redirect('/produtos')->withInput(Request::only('nome'));
-
-            //return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
-
-            return redirect()->route('produtosListagem');
+            return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
         }
 
         public function listaJson()
