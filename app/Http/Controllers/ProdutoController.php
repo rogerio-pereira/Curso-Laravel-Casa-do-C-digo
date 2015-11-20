@@ -40,5 +40,18 @@
         {
             return view('produto.formulario');
         }
+
+        public function adiciona()
+        {
+            $nome = Request::input('nome');
+            $descricao = Request::input('descricao');
+            $valor = Request::input('valor');
+            $quantidade = Request::input('quantidade');
+
+            DB::insert  (
+                            'INSERT INTO produtos (nome, quantidade, valor, descricao) VALUES (?,?,?,?)',
+                            array($nome, $quantidade, $valor, $descricao)
+                        );
+        }
     }
 ?>
