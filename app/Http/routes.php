@@ -17,6 +17,8 @@ Route::get('/produtos/json', 'ProdutoController@listaJson');
 
 Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
 
+Route::get('/produtos/remove/{id}', 'ProdutoController@remove');
+
 Route::get('/', function()
 {
     return '<h1>Primeira logica com Laravel</h1>';

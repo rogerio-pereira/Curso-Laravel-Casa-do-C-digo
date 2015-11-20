@@ -20,6 +20,11 @@
                             Visualizar
                         </a>
                     </td>
+                    <td>
+                        <a href="produtos/remove/{{$produto->id}}">
+                            Remover
+                        </a>
+                    </td>
                 </tr>
             @endforeach
         </table>
