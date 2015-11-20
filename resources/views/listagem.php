@@ -4,8 +4,9 @@
         <title>Controle de Estoque</title>
     </head>
     <body>
-        <h1>Listagem de Produtos</h1>
         <div class='container'>
+            <h1>Listagem de Produtos</h1>
+
             <table class='table table-striped table-bordered table-hover'>
                 <?php foreach ($produtos as $produto) : ?>
                     <tr>
