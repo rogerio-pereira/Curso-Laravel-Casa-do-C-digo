@@ -21,6 +21,11 @@
                         </a>
                     </td>
                     <td>
+                        <a href="produtos/edita/{{$produto->id}}">
+                            Editar
+                        </a>
+                    </td>
+                    <td>
                         <a href="produtos/remove/{{$produto->id}}">
                             Remover
                         </a>
@@ -37,7 +42,7 @@
 
         @if(old('nome'))
             <div class='alert alert-success'>
-                <strong>Sucesso!</strong> O produto {{old('nome')}} foi adicionado com sucesso
+                <strong>Sucesso!</strong> O produto {{old('nome')}} foi salvo com sucesso
             </div>
         @endif
     @endif
