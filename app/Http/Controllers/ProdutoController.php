@@ -16,14 +16,12 @@
 
         public function mostra($id)
         {
-            //$id = Request::route('id'); o parametro no metodo faz isso
+            $produto = Produto::find($id);
 
-            $resposta = DB::select('SELECT * FROM produtos WHERE id = ?', [$id]);
-
-            if(empty($resposta))
+            if(empty($produto))
                 return "Esse produto nao existe";
             
-            return view('produto.detalhes')->with('produto', $resposta[0]);
+            return view('produto.detalhes')->with('produto', $produto);
         }
 
         public function novo()

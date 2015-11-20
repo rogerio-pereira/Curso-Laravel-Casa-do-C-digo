@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Produto extends Model
 {
     //Linha opcional
-    protected $table = 'produtos'
+    protected $table = 'produtos';
 }
