@@ -59,5 +59,12 @@
 
             return redirect()->route('produtosListagem');
         }
+
+        public function listaJson()
+        {
+            $produtos = DB::select('SELECT * FROM produtos');
+
+            return response()->json($produtos);
+        }
     }
 ?>
