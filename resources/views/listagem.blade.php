@@ -1,9 +1,15 @@
 @extends('principal')
 
 @section('conteudo')
-    <h1>Listagem de Produtos</h1>
+    @if(empty($produtos))
+        <div class="alert alert-danger">
+            Você não tem nenhum produto cadastrado.
+        </div>
+    @else
+        <h1>Listagem de Produtos</h1>
 
-    <table class='table table-striped table-bordered table-hover'>
+        <table class='table table-striped table-bordered table-hover'>
+
         @foreach ($produtos as $produto)
             <tr>
                 <td>{{$produto->nome}}</td>
@@ -17,5 +23,7 @@
                 </td>
             </tr>
         @endforeach
-    </table>
+
+        </table>
+    @endif
 @stop
