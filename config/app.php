@@ -195,5 +195,5 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
     ],
-
+    Bestmomo\Scafold\ScafoldServiceProvider::class,
 ];
