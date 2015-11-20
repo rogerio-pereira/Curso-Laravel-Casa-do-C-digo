@@ -24,9 +24,9 @@
             //return view('listagem', $data);            
         }
 
-        public function mostra()
+        public function mostra($id)
         {
-            $id = Request::input('id', 0); //Obtem o campo id da url, caso nao tenha seta como 0
+            //$id = Request::route('id'); o parametro no metodo faz isso
 
             $resposta = DB::select('SELECT * FROM produtos WHERE id = ?', [$id]);
 

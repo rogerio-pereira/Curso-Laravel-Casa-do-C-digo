@@ -3,7 +3,7 @@
 //Nome do Contrlador@Metodo
 Route::get('/produtos', 'ProdutoController@lista');
 
-Route::get('/produtos/mostra', 'ProdutoController@mostra');
+Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra'); //Se quisesse deixa o paramatro opcional coloca ? {id?}
 
 Route::get('/', function()
 {

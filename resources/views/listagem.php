@@ -14,8 +14,8 @@
                         <td><?= $produto->descricao ?></td>
                         <td><?= $produto->quantidade ?></td>
                         <td>
-                            <a href="produtos/mostra?id=<?= $produto->id ?>">
-                                <span class="glyphicon glyphicon-search"></span>
+                            <a href="produtos/mostra/<?= $produto->id ?>">
+                                Visualizar
                             </a>
                         </td>
                     </tr>
