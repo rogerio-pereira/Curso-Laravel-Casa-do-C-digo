@@ -52,6 +52,8 @@
                             'INSERT INTO produtos (nome, quantidade, valor, descricao) VALUES (?,?,?,?)',
                             array($nome, $quantidade, $valor, $descricao)
                         );
+
+            return view('produto.adicionado')->with('nome', $nome);
         }
     }
 ?>

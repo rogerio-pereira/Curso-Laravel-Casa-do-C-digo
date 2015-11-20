@@ -21,7 +21,7 @@
                 </div>
             </nav>
 
-            @yield('conteudo');
+            @yield('conteudo')
 
             <footer class='footer'>
                 <p>&copy; Livro de Laravel da Casa do Codigo</p>
