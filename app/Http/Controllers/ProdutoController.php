@@ -1,9 +1,9 @@
 <?php
     namespace estoque\Http\Controllers;
 
-    use Illuminate\Support\Facades\DB;
     use estoque\Produto;
     use Request;
+    use estoque\Http\Request\ProdutosRequest;
 
     class ProdutoController extends Controller
     {
@@ -11,7 +11,7 @@
         {
             $produtos = Produto::all();
 
-            return view('produto.listagem')->withProdutos($produtos);
+            return view('produto.listagem')->with('produtos', $produtos);
         }
 
         public function mostra($id)
