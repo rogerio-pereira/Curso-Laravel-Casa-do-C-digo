@@ -53,7 +53,7 @@
                             array($nome, $quantidade, $valor, $descricao)
                         );
 
-            return view('produto.adicionado')->with('nome', $nome);
+            return redirect('/produtos');
         }
     }
 ?>
