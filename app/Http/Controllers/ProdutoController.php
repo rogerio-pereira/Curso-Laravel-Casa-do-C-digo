@@ -2,26 +2,16 @@
     namespace estoque\Http\Controllers;
 
     use Illuminate\Support\Facades\DB;
+    use estoque\Produto;
     use Request;
 
     class ProdutoController extends Controller
     {
         public function lista()
         {
-            $produtos = DB::select('SELECT * FROM produtos');
-
-            //return view('listagem')->with('produtos', $produtos);
+            $produtos = Produto::all();
 
             return view('produto.listagem')->withProdutos($produtos);
-
-            //return view('listagem', ['produtos' => $produtos]);
-
-            //$data = ['produtos' => $produtos];
-            //return view('listagem', $data);
-
-            ///$data = [];
-            //$data['produtos'] = $produtos;
-            //return view('listagem', $data);            
         }
 
         public function mostra($id)
@@ -62,7 +52,7 @@
 
         public function listaJson()
         {
-            $produtos = DB::select('SELECT * FROM produtos');
+            $produtos = Produto::all();
 
             return response()->json($produtos);
         }
