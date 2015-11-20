@@ -53,7 +53,7 @@
                             array($nome, $quantidade, $valor, $descricao)
                         );
 
-            return redirect('/produtos');
+            return redirect('/produtos')->withInput();
         }
     }
 ?>
