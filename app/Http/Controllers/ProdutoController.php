@@ -22,5 +22,17 @@
             //$data['produtos'] = $produtos;
             //return view('listagem', $data);            
         }
+
+        public function mostra()
+        {
+            $id = 1;
+
+            $resposta = DB::select('SELECT * FROM produtos WHERE id = ?', [$id]);
+
+            if(empty($resposta))
+                return "Esse produto nao existe";
+            
+            return view('detalhes')->with('produto', $resposta[0]);
+        }
     }
 ?>

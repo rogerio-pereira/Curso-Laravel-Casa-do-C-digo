@@ -3,6 +3,8 @@
 //Nome do Contrlador@Metodo
 Route::get('/produtos', 'ProdutoController@lista');
 
+Route::get('/produtos/mostra', 'ProdutoController@mostra');
+
 Route::get('/', function()
 {
     return '<h1>Primeira logica com Laravel</h1>';
