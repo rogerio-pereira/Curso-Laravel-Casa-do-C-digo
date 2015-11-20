@@ -12,7 +12,7 @@
 
             //return view('listagem')->with('produtos', $produtos);
 
-            return view('listagem')->withProdutos($produtos);
+            return view('produto.listagem')->withProdutos($produtos);
 
             //return view('listagem', ['produtos' => $produtos]);
 
@@ -33,7 +33,7 @@
             if(empty($resposta))
                 return "Esse produto nao existe";
             
-            return view('detalhes')->with('produto', $resposta[0]);
+            return view('produto.detalhes')->with('produto', $resposta[0]);
         }
     }
 ?>
