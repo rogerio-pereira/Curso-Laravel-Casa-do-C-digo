@@ -4,7 +4,7 @@
     <h1>Listagem de Produtos</h1>
 
     <table class='table table-striped table-bordered table-hover'>
-        <?php foreach ($produtos as $produto) : ?>
+        @foreach ($produtos as $produto)
             <tr>
                 <td>{{$produto->nome}}</td>
                 <td>{{$produto->valor}}</td>
@@ -16,6 +16,6 @@
                     </a>
                 </td>
             </tr>
-        <?php endforeach ?>
+        @endforeach
     </table>
 @stop
