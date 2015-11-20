@@ -54,7 +54,10 @@
                         );
 
             ///return redirect('/produtos')->withInput(Request::only('nome'));
-            return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
+
+            //return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
+
+            return redirect()->route('produtosListagem');
         }
     }
 ?>

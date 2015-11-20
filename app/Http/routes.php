@@ -1,7 +1,13 @@
 <?php
 
 //Nome do Contrlador@Metodo
-Route::get('/produtos', 'ProdutoController@lista');
+Route::get  (
+                '/produtos', 
+                [
+                    'as' => 'produtosListagem',
+                    'uses' => 'ProdutoController@lista'
+                ]
+            );
 
 Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->where('id', '[0-9]+'); //Se quisesse deixa o paramatro opcional coloca ? {id?}
 
