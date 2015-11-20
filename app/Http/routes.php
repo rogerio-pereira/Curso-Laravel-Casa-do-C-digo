@@ -9,3 +9,8 @@ Route::get('/outra', function()
 {
     return '<h1>Outra logica com Laravel</h1>';
 });
+
+Route::get('/outra', function()
+{
+    return '<h1>Logica sobrescrita com Laravel</h1>';
+});
