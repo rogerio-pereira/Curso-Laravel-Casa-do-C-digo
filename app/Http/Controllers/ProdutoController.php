@@ -9,7 +9,7 @@
         {
             $produtos = DB::select('SELECT * FROM produtos');
 
-            return view('listagem');
+            return view('listagem')->with('produtos', $produtos);
         }
     }
 ?>
