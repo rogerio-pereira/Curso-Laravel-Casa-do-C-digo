@@ -35,5 +35,10 @@
             
             return view('produto.detalhes')->with('produto', $resposta[0]);
         }
+
+        public function novo()
+        {
+            return view('produto.formulario');
+        }
     }
 ?>
