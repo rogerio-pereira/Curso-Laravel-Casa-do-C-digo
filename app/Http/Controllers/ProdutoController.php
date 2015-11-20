@@ -2,6 +2,7 @@
     namespace estoque\Http\Controllers;
 
     use Illuminate\Support\Facades\DB;
+    use Request;
 
     class ProdutoController extends Controller
     {
@@ -25,7 +26,7 @@
 
         public function mostra()
         {
-            $id = 1;
+            $id = Request::input('id', 0); //Obtem o campo id da url, caso nao tenha seta como 0
 
             $resposta = DB::select('SELECT * FROM produtos WHERE id = ?', [$id]);
 
