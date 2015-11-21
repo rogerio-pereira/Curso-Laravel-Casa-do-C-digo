@@ -45,6 +45,8 @@
 
         public function remove($id)
         {
+            if(Auth:guest())
+                return redirect('auth/login');
             $produto = Produto::find($id);
             $produto->delete();
 
