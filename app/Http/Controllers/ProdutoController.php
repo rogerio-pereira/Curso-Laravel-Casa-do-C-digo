@@ -4,6 +4,7 @@
     use estoque\Produto;
     use Request;
     use estoque\Http\Request\ProdutosRequest;
+    use Validator;
 
     class ProdutoController extends Controller
     {
@@ -31,6 +32,14 @@
 
         public function adiciona()
         {
+            $validator = Validator::make(
+                                            ['nome' => Request::input('nome')],
+                                            ['nome' => 'required|min:5']
+                                        );
+
+            if($validator->fails())
+                return redirect()->action('ProdutoController@novo');
+
             Produto::create(Request::all());
 
             return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
