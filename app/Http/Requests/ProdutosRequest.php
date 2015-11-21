@@ -29,4 +29,11 @@ class ProdutosRequest extends Request
                     'valor' => 'required|numeric'
                 ];
     }
+
+    public function messages()
+    {
+        return  [
+                    'required' => 'O :attribute nao pode ser vazio.',
+                ];
+    }
 }
