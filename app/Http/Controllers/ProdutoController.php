@@ -9,7 +9,7 @@
     {
         public function __construct()
         {
-            $this->middleware('nosso-middleware', ['only' => ['adiciona', 'remove', 'altera']]);
+            $this->middleware('auth', ['only' => ['adiciona', 'remove', 'altera']]);
         }
 
         public function lista()
