@@ -16,17 +16,8 @@ Route::get('/produtos/remove/{id}', 'ProdutoController@remove');
 Route::get('/produtos/edita/{id}', 'ProdutoController@edita');
 Route::post('/produtos/altera/{id}', 'ProdutoController@altera');
 
-Route::get('/', function()
-{
-    return '<h1>Primeira logica com Laravel</h1>';
-});
-
-Route::get('/outra', function()
-{
-    return '<h1>Outra logica com Laravel</h1>';
-});
-
-Route::get('/outra', function()
-{
-    return '<h1>Logica sobrescrita com Laravel</h1>';
-});
+Route::get('/home', 'HomeController@index');
+Route::controllers  ([
+                        'auth' => 'Auth\AuthController',
+                        'password' => 'Auth\PasswordController',
+                    ]);

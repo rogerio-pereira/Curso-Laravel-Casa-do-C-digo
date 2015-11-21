@@ -136,6 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -195,5 +196,4 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
     ],
-    Bestmomo\Scafold\ScafoldServiceProvider::class,
 ];
